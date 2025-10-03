@@ -1,0 +1,8 @@
+# Local-only settings (this file is NOT committed; commit this example)
+styletts2_repo: "C:/path/to/StyleTTS2/examples"      # path to the cloned upstream repo
+checkpoint: "C:/path/to/StyleTTS2/pretrained_models/LibriTTS/epochs_2nd_00020.pth"
+config:     "C:/path/to/pretrained_models/LibriTTS/config.yml"
+
+# Defaults for outputs (safe to change)
+out_dir: "outputs"
+default_ref_audio: ""   # leave empty or put a local file

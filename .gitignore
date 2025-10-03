@@ -2,3 +2,18 @@ settings.json
 bark/outputs
 /outputs
 *.wav
+# VS Code project settings
+**/.vscode/
+**/settings.json
+
+# Virtualenvs
+**/.venv/
+
+# Local configs
+config.yaml
+
+# Outputs
+**/outputs/
+*.wav
+*.mp3
+*.flac
