@@ -19,7 +19,7 @@ import torchaudio
 try:
     from bark import generate_audio, preload_models, SAMPLE_RATE  # new-ish
 except ImportError:
-    from bark.api import generate_audio, preload_models, SAMPLE_RATE  # older
+    from bark.api import generate_audio, preload_models, SAMPLE_RATE  # type: ignore # older
 
 def main():
     # Ensure UTF-8 (Windows consoles can be quirky with ♪)
@@ -58,7 +58,7 @@ def main():
     # Optional: very gentle peak clamp to avoid accidental clipping
     wav = torch.clamp(wav, -0.99, 0.99)
 
-    torchaudio.save(out_path, wav.cpu(), int(SAMPLE_RATE))
+    torchaudio.save(out_path, wav.cpu(), int(SAMPLE_RATE)) # type: ignore
     dur = wav.shape[-1] / float(SAMPLE_RATE)
     print(f"✅  Saved → {out_path}  ({dur:.2f}s @ {SAMPLE_RATE} Hz)")
 

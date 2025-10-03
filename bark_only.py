@@ -6,7 +6,7 @@ import soundfile as sf
 try:
     from bark import generate_audio, preload_models, SAMPLE_RATE
 except ImportError:
-    from bark.api import generate_audio, preload_models, SAMPLE_RATE
+    from bark.api import generate_audio, preload_models, SAMPLE_RATE # type: ignore
 
 def main():
     ap = argparse.ArgumentParser()
